@@ -3,11 +3,15 @@ import glob
 
 
 def main():
-    files_list = find_files()
+    print('Which file names do you want to search for?')
+    file_name = input() or '*'
+    print('Which file names do you want to search for?')
+    file_extension = input() or '*'
+    files_list = find_files(file_name, file_extension)
     write_to_txt(files_list)
 
 
-def find_files(file_name='*', file_extension='json'):
+def find_files(file_name='*', file_extension='*'):
     files_list = glob.glob(f"**/{file_name}.{file_extension}", recursive=True)
     return files_list
 
