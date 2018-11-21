@@ -5,7 +5,7 @@ import glob
 def main():
     print('Which file names do you want to search for?')
     file_name = input() or '*'
-    print('Which file names do you want to search for?')
+    print('Which file extensions do you want to search for?')
     file_extension = input() or '*'
     files_list = find_files(file_name, file_extension)
     write_to_txt(files_list)
